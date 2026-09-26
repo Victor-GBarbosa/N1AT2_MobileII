@@ -112,14 +112,12 @@ const styles = StyleSheet.create({
     marginTop: 50,
     flexDirection: "row",
     borderRadius: 15,
-    overflow: "hidden",
   },
 
   iconContainer: {
     paddingVertical: 20,
     paddingHorizontal: 20,
     justifyContent: "center",
-    alignItems: "center",
     borderRightColor: "#991F36",
     borderRightWidth: 2,
   },
@@ -128,7 +126,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 20,
     textAlign: "center",
-    alignSelf: "center",
     fontFamily: "Inter_500Medium",
   },
 });
