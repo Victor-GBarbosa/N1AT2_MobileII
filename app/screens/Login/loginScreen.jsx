@@ -1,7 +1,7 @@
-import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Image, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
-import DiscordIcon from "../../components/DiscordIcon";
+import DiscordButton from "../../components/DiscordButton";
 
 const LoginScreen = () => {
   return (
@@ -36,14 +36,10 @@ const LoginScreen = () => {
               Crie Grupos para jogar seus games favoritos com seus amigos
             </Text>
           </View>
-          <TouchableOpacity style={[styles.button]}>
-            <View style={styles.iconContainer}>
-              <DiscordIcon color="#FFF" />
-            </View>
-            <Text style={[styles.whiteText, styles.buttonText]}>
-              Entrar com Discord
-            </Text>
-          </TouchableOpacity>
+          <DiscordButton
+            text="Entrar com Discord"
+            style={styles.discordButton}
+          />
         </View>
       </SafeAreaView>
     </LinearGradient>
@@ -105,27 +101,9 @@ const styles = StyleSheet.create({
     fontWeight: "200",
   },
 
-  button: {
-    backgroundColor: "#E51C44",
+  discordButton: {
     width: "80%",
     alignSelf: "center",
     marginTop: 50,
-    flexDirection: "row",
-    borderRadius: 15,
-  },
-
-  iconContainer: {
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    justifyContent: "center",
-    borderRightColor: "#991F36",
-    borderRightWidth: 2,
-  },
-
-  buttonText: {
-    flex: 1,
-    paddingVertical: 20,
-    textAlign: "center",
-    fontFamily: "Inter_500Medium",
   },
 });

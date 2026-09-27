@@ -23,6 +23,8 @@ import { StyleSheet, Text, View } from 'react-native';
 //Componentes
 import LoginScreen from './app/screens/Login/loginScreen';
 import Home from './app/screens/Home/Home';
+import ServerDetails from './app/screens/ServerDetails/ServerDetails';
+import ScheduleMatch from './app/screens/ScheduleMatch/ScheduleMatch';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -51,7 +53,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/* <LoginScreen></LoginScreen> */}
-      <Home></Home>
+      {/* <Home></Home> */}
+      {/* <ServerDetails></ServerDetails> */}
+      <ScheduleMatch></ScheduleMatch>
     </View>
   );
 }
