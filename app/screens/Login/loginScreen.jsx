@@ -1,6 +1,7 @@
 import { StyleSheet, View, Image, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import DiscordButton from "../../components/DiscordButton";
 
 const LoginScreen = () => {
@@ -39,6 +40,7 @@ const LoginScreen = () => {
           <DiscordButton
             text="Entrar com Discord"
             style={styles.discordButton}
+            onPress={() => router.replace("/home")}
           />
         </View>
       </SafeAreaView>

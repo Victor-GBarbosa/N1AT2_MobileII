@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, FlatList, TouchableOpacity, ScrollView } from "
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import { CategoryMock } from "../../mocks/CategoryData";
 import { MatchMock } from "../../mocks/MatchData";
 import TagCard from "../../components/TagCard";
@@ -37,7 +38,12 @@ const Home = () => {
               <Text style={styles.whiteText}>Hoje é dia de vitoria</Text>
             </View>
             </View>
-            <TouchableOpacity style={styles.headerButtons}><Text style={{color: "#fff", fontWeight: "300", fontSize: 32}}>+</Text></TouchableOpacity>
+            <TouchableOpacity
+              style={styles.headerButtons}
+              onPress={() => router.push("/schedule-match")}
+            >
+              <Text style={{color: "#fff", fontWeight: "300", fontSize: 32}}>+</Text>
+            </TouchableOpacity>
           </View>
           <FlatList
             data={CategoryMock}
@@ -55,7 +61,9 @@ const Home = () => {
 
           <FlatList
             data={MatchMock}
-            renderItem={({ item }) => <MatchCard {...item} />}
+            renderItem={({ item }) => (
+              <MatchCard {...item} onPress={() => router.push("/server-details")} />
+            )}
             scrollEnabled={false}
             removeClippedSubviews={false}
             contentContainerStyle={styles.matchList}

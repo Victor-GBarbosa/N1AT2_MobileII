@@ -4,6 +4,7 @@
     "slug": "N1AT2",
     "version": "1.0.0",
     "orientation": "portrait",
+    "scheme": "n1at2",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
@@ -23,7 +24,9 @@
     "plugins": [
       "expo-font",
       "expo-splash-screen",
-      "expo-image"
+      "expo-image",
+      "expo-router",
+      "expo-status-bar"
     ]
   }
 }

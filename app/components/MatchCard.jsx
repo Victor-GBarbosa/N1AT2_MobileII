@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import HostIcon from './HostIcon'
 
-const MatchCard = ({ title, date, tag, isHost, gameCoverIndex }) => {
+const MatchCard = ({ title, date, tag, isHost, gameCoverIndex, onPress }) => {
 
   const gameCoverArray = [
     require("../../assets/covers/R6.png"), // 0 == R6
@@ -21,7 +21,7 @@ const MatchCard = ({ title, date, tag, isHost, gameCoverIndex }) => {
   const hostLabel = isHost ? "Anfitrião" : "Visitante"
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.coverContainer}>
         <Image style={styles.cover} source={gameCoverArray[gameCoverIndex]}></Image>
       </View>
@@ -43,7 +43,7 @@ const MatchCard = ({ title, date, tag, isHost, gameCoverIndex }) => {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 

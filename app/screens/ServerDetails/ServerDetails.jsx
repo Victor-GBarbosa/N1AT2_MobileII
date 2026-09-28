@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import DiscordButton from "../../components/DiscordButton";
 
 const players = [
@@ -19,7 +20,7 @@ const ServerDetails = () => {
     >
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.header}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => router.back()}>
             <Image source={require("../../../assets/icons/backArrow.png")} style={styles.headerIcon} />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Detalhes</Text>
